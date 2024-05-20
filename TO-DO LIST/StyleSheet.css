@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg , #153677 , #4e085f);
+    padding: 10px;
+}
+
+.todo_app{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.todo_app h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo_app h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(./images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(./images/checked.png);
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background: #edeef0;
+}
+
+/*
+Outline differs from borders! Unlike border, the outline is drawn outside the element's border, 
+and may overlap other content. Also, the outline is NOT a part of the element's dimensions; the 
+element's total width and height is not affected by the width of the outline.
+*/
+
+/*
+CURSOR PROPERTIES : 
+alias	        The cursor indicates an alias of something is to be created	
+all-scroll	    The cursor indicates that something can be scrolled in any direction	
+auto	        Default. The browser sets a cursor	
+cell	        The cursor indicates that a cell (or set of cells) may be selected	
+col-resize	    The cursor indicates that the column can be resized horizontally	
+context-menu	The cursor indicates that a context-menu is available	
+copy	        The cursor indicates something is to be copied	
+crosshair	    The cursor render as a crosshair	
+default	        The default cursor	
+e-resize	    The cursor indicates that an edge of a box is to be moved right (east)	
+ew-resize	    Indicates a bidirectional resize cursor	
+grab	        The cursor indicates that something can be grabbed	
+grabbing	    The cursor indicates that something can be grabbed	
+help	        The cursor indicates that help is available	
+move	        The cursor indicates something is to be moved	
+n-resize	    The cursor indicates that an edge of a box is to be moved up (north)	
+ne-resize	    The cursor indicates that an edge of a box is to be moved up and right (north/east)	
+nesw-resize	    Indicates a bidirectional resize cursor	
+ns-resize	    Indicates a bidirectional resize cursor	
+nw-resize	    The cursor indicates that an edge of a box is to be moved up and left (north/west)	
+nwse-resize	    Indicates a bidirectional resize cursor	
+no-drop	        The cursor indicates that the dragged item cannot be dropped here	
+none	        No cursor is rendered for the element	
+not-allowed	    The cursor indicates that the requested action will not be executed	
+pointer	        The cursor is a pointer and indicates a link	
+progress	    The cursor indicates that the program is busy (in progress)	
+row-resize	    The cursor indicates that the row can be resized vertically	
+s-resize	    The cursor indicates that an edge of a box is to be moved down (south)	
+se-resize	    The cursor indicates that an edge of a box is to be moved down and right (south/east)	
+sw-resize	    The cursor indicates that an edge of a box is to be moved down and left (south/west)	
+text	        The cursor indicates text that may be selected	
+URL	            A comma separated list of URLs to custom cursors. Note: Always specify a generic cursor at the end of the list, in case none of the URL-defined cursors can be used	
+vertical-text	The cursor indicates vertical-text that may be selected	
+w-resize	    The cursor indicates that an edge of a box is to be moved left (west)	
+wait	        The cursor indicates that the program is busy	
+zoom-in	        The cursor indicates that something can be zoomed in	
+zoom-out	    The cursor indicates that something can be zoomed out
+*/
