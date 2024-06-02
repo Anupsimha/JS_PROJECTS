@@ -36,6 +36,7 @@ nav .circle{
     background: #fff;
     color: #f53192;
     box-shadow: 0 5px 10px rgba(255 , 26 , 26 , 0.22);
+    cursor: pointer;
 }
 
 .song_img{
@@ -58,7 +59,7 @@ nav .circle{
 }
 
 #progress{
-    -webkit-appearance: none;
+    appearance: none;   /* OR -webkit-appearance : none; (In case Of Webkit Browsers)*/
     width: 100%;
     height: 6px;
     background: #f53192;
@@ -67,7 +68,7 @@ nav .circle{
     margin: 40px 0px;
 }
 
-#progress::-webkit-slider-thumb{
+#progress::-webkit-slider-thumb{        /*Slider-thumb is The Draggable button in an slider*/
     -webkit-appearance: none;
     background: #f53192;
     width: 30px;
